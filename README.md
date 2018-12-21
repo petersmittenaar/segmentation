@@ -1,0 +1,2 @@
+# segmentation
+Notes on segmentation
