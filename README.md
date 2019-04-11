@@ -1,7 +1,11 @@
 # Common segmentation algorithms and distance metrics
 There are many ways to divide your data into subgroups. This is a short overview of some of these methods, enriched with a few comments on each method. In the second table I list several methods of calculating pairwise distances between records in your data. 
 
-There are many nuances to each of the methods described here - they are just a quick duckduckgo search away on stack overflow and myriad textbooks. Towards Data Science has [a great post with animations](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68). 
+There are many nuances to each of the methods described here - they are just a quick duckduckgo search away on stack overflow and myriad textbooks. Towards Data Science has [a great post with animations](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68). There are many interactive applications to see clustering in action, e.g. [Stanford class](http://stanford.edu/class/ee103/visualizations/kmeans/kmeans.html), or [ClusterEng](http://education.knoweng.org/clustereng) which can use your own data or sample (genomic) data.
+
+Lastly, real-world segmentation rarely looks like textbook examples. To quote [this excellent blogpost](http://joelcadwell.blogspot.com/2014/03/):
+
+> If there is variability in our data, a cluster analysis will yield partitions. Given a partitioning, a data analyst will magnify those differences by focusing on contrastive comparisons and assigning evocative names. Once we have names, especially if those names have high imagery, can we be blamed for the reification of minor distinctions?
 
 Name | Input | Particularly useful for | Pros | Cons | R function | Example
 -- | -- | -- | -- | -- | -- | --
