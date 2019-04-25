@@ -77,8 +77,16 @@ GenerateAndPlotClusters = function(df, kClusters=length(unique(df$true.clust)), 
     plot(htree, labels = FALSE, xlab = '', sub = '', main = paste('Dendrogram', plot.label))
     # abline(h=kClusters, col="red", lty=2)
   }
-  
-  
-  
+}
+
+PlotElbowKmeans = function(df, max.clusters=15) {
+  # With thanks to https://stackoverflow.com/questions/15376075/cluster-analysis-in-r-determine-the-optimal-number-of-clusters
+  # Note: data are not scaled so assumes input is ready for kmeans
+  wss <- (nrow(df)-1)*sum(apply(df, 2, var))
+  for (i in 2:max.clusters) {
+    wss[i] <- sum(kmeans(df, centers = i)$withinss)
+  }   
+  plot(1:max.clusters, wss, type="b", xlab = "Number of Clusters", ylab = "Within groups sum of squares")
+
 }
 
